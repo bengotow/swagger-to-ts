@@ -98,6 +98,15 @@ function parse(spec: Swagger2, options: Swagger2Options = {}): string {
       return nestedName;
     }
 
+    if (
+      type === 'object' &&
+      value.additionalProperties &&
+      value.additionalProperties !== true &&
+      value.additionalProperties['$ref']
+    ) {
+      const [refName] = getRef(value.additionalProperties['$ref']);
+      return `{[key: string]: ${refName}}`;
+    }
     if (type) {
       return TYPES[type] || type || DEFAULT_TYPE;
     }
