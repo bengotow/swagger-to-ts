@@ -7,7 +7,7 @@
     "node": ">= 8.0.0"
   },
   "bin": {
-    "swagger-to-ts": "bin/cli.js"
+    "swagger-to-ts": "pkg/bin/cli.js"
   },
   "repository": {
     "type": "git",
