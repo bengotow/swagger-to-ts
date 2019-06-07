@@ -1,10 +1,10 @@
 {
-  "name": "@bengotow/swagger-to-ts",
+  "name": "@manifoldco/swagger-to-ts",
   "description": "Generate TypeScript types from Swagger OpenAPI specs",
-  "version": "1.1.5",
+  "version": "1.1.3",
   "license": "ISC",
   "bin": {
-    "swagger-to-ts": "bin/cli.js"
+    "swagger-to-ts": "pkg/bin/cli.js"
   },
   "files": [
     "dist-*/",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bengotow/swagger-to-ts.git"
+    "url": "git+https://github.com/manifoldco/swagger-to-ts.git"
   },
   "dependencies": {
     "chalk": "^2.4.2",

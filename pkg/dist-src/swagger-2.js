@@ -98,7 +98,7 @@ function parse(spec, options = {}) {
             const newID = `${ID}${capitalize(formattedKey)}`;
             const interfaceType = getType(value, newID);
             if (typeof value.description === 'string') {
-                output.push(`/* ${value.description.replace(/\n$/, '').replace(/\n/g, '\n// ')} */`);
+                output.push(`/** ${value.description.replace(/\n$/, '').replace(/\n/g, '\n// ')} */`);
             }
             if (Array.isArray(value.enum)) {
                 output.push(`${name}: ${value.enum.map(option => JSON.stringify(option)).join(' | ')};`);

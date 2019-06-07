@@ -254,7 +254,7 @@ function parse(spec, options = {}) {
       const interfaceType = getType(value, newID);
 
       if (typeof value.description === 'string') {
-        output.push(`/* ${value.description.replace(/\n$/, '').replace(/\n/g, '\n// ')} */`);
+        output.push(`/** ${value.description.replace(/\n$/, '').replace(/\n/g, '\n// ')} */`);
       }
 
       if (Array.isArray(value.enum)) {

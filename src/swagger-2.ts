@@ -159,7 +159,7 @@ function parse(spec: Swagger2, options: Swagger2Options = {}): string {
 
       if (typeof value.description === 'string') {
         // Print out descriptions as comments, but only if there’s something there (.*)
-        output.push(`/* ${value.description.replace(/\n$/, '').replace(/\n/g, '\n// ')} */`);
+        output.push(`/** ${value.description.replace(/\n$/, '').replace(/\n/g, '\n// ')} */`);
       }
 
       // Handle enums in the same definition
